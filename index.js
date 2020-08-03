@@ -2,7 +2,7 @@
 
 document.querySelector("button").addEventListener("click", handleClick);
 
-function handleClick(e) {
+function handleClick() {
   const timeString = document.getElementById('time').value
   displayMessage(greet(timeString))
 }
@@ -10,21 +10,21 @@ function handleClick(e) {
 /* End Given Code, don't edit above here...*/
 
 /* Write your implementation of greet() */
-
 function greet(time) {
-
   let time_split = time.split(':')
   let hour = time_split[0]
-  hour = parseInt(hour)
-
+  hour = Number(hour)
   if (hour < 12) {
-   console.log("Good Morning")
+    return ("Good Morning")
   }else if (hour >= 12 && hour < 17) {
-    console.log("Good afternoon")
+    return("Good Afternoon")
   }else {
-    console.log("Good evening")
+    return("Good Evening")
   }
 }
 
 /* Write your implementation of displayMessage() */
-let time_box = document.getElementById('time')
+function displayMessage(message) {
+  let header = document.getElementById('greeting')
+  header.innerText = message
+}
