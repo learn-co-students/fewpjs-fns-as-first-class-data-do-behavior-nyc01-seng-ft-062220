@@ -1,4 +1,3 @@
-/* Given Code, don't edit */
 
 document.querySelector("button").addEventListener("click", handleClick);
 
@@ -7,7 +6,13 @@ function handleClick(e) {
   displayMessage(greet(timeString))
 }
 
-/* End Given Code, don't edit above here...*/
+function greet(timeString) { let timeArray = timeString.split(2);
+                             let timeInteger = parseInt(timeArray[0]);
+if (timeInteger < 12) return "Good Morning"
+else if ( timeInteger > 12 && timeInteger < 17) return "Good Afternoon"
+else  return "Good Evening"
+}
 
-/* Write your implementation of greet() */
-/* Write your implementation of displayMessage() */
+function displayMessage(string) { document.getElementById("greeting").innerText = string }
+
+
