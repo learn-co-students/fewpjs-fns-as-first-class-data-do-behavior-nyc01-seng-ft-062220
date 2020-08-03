@@ -7,7 +7,13 @@ function handleClick(e) {
   displayMessage(greet(timeString))
 }
 
-/* End Given Code, don't edit above here...*/
 
-/* Write your implementation of greet() */
-/* Write your implementation of displayMessage() */
+function greet(time){
+  const formatTime = parseInt(time);
+  return (formatTime < 12) ? "Good Morning" : (formatTime < 17) ? "Good Afternoon" : "Good Evening";
+}
+
+function displayMessage(string){
+  document.getElementById("greeting").innerText = string;
+}
+
